@@ -34,6 +34,13 @@ function addProjectDetails(e) {
 function callback(result){
 	console.log(result);
 	var id = result['id'];
-	$(".detail#"+id).html("FDDGFDGFDGs");
+	console.log(id);
+	console.log("callback being called");
+	//OR $('#project'+id).find('.details').html("This works too!");
+
+	$("#project" + id + " .details").html("<img src=\'"+result['image']+
+											"\' class=\'detailsImage\'>" + "<h2>" + result['date'] + "</h2>" + 
+											result['summary']);
+
 
 }
